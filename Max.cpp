@@ -1,34 +1,34 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 int main()
 {
-    int a,b,c;
+    int a, b, c;
 
-    cout<<"Enter 3 Values : ";
-    cin>>a>>b>>c;
+    cout << "Enter 3 Values : ";
+    cin >> a >> b >> c;
 
-    if(a>b)
+    if (a > b)
     {
-        if(a>c)
+        if (a > c)
         {
-            cout<<"The Max Number Is "<<a<<".";
+            cout << "The Max Number Is " << a << ".";
         }
         else
         {
-            cout<<"The Max Number Is "<<c<<".";
+            cout << "The Max Number Is " << c << ".";
         }
     }
     else
     {
-        if(b>c)
+        if (b > c)
         {
-            cout<<"The Max Number Is "<<b<<".";
+            cout << "The Max Number Is " << b << ".";
         }
         else
         {
-            cout<<"The Max Number Is "<<c<<".";
+            cout << "The Max Number Is " << c << ".";
         }
     }
-    
+
     return 0;
 }

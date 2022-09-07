@@ -1,24 +1,24 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 int fact(int n)
 {
-    int factorial=1,i;
-    for(i=2;i<=n;i++)
+    int factorial = 1, i;
+    for (i = 2; i <= n; i++)
     {
-        factorial*=i;
+        factorial *= i;
     }
     return factorial;
 }
 
 int main()
 {
-   int n,ans;
+    int n, ans;
 
-   cout<<"Enter The number :";
-   cin>>n;
+    cout << "Enter The number :";
+    cin >> n;
 
-   ans=fact(n);
-   cout<<"Value Of Factorial Upto "<<n<<" Is "<<ans;
-   return 0;
+    ans = fact(n);
+    cout << "Value Of Factorial Upto " << n << " Is " << ans;
+    return 0;
 }

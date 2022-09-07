@@ -1,13 +1,13 @@
-#include<iostream>
-#include<cmath>
+#include <iostream>
+#include <cmath>
 using namespace std;
 
 bool Prime(int num)
 {
     int i;
-    for(i=2;i<=sqrt(num);i++)
+    for (i = 2; i <= sqrt(num); i++)
     {
-        if(num%i==0)
+        if (num % i == 0)
         {
             return false;
         }
@@ -17,17 +17,17 @@ bool Prime(int num)
 
 int main()
 {
-   int i,a,b;
-   cout<<"Enter The Values :";
-   cin>>a>>b;
+    int i, a, b;
+    cout << "Enter The Values :";
+    cin >> a >> b;
 
-   cout<<"Prime Number Between "<<a<<" And "<<b<<" : ";
-   for(i=a;i<=b;i++)
-   {
-       if(Prime(i))
-       {
-           cout<<i<<" ";
-       }
-   }
-   return 0;
+    cout << "Prime Number Between " << a << " And " << b << " : ";
+    for (i = a; i <= b; i++)
+    {
+        if (Prime(i))
+        {
+            cout << i << " ";
+        }
+    }
+    return 0;
 }

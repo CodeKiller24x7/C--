@@ -25,19 +25,18 @@ public:
 
 void date_time::input_date()
 {
-    int temp1,temp2;
-    cout<<"Enter The Month : ";
-    cin>>temp1;
-    if(temp1>0  && temp1<=12)
+    int temp1, temp2;
+    cout << "Enter The Month : ";
+    cin >> temp1;
+    if (temp1 > 0 && temp1 <= 12)
     {
-        month=temp1;
-        cout<<"Enter The Date : ";
-        cin>>temp2;
-        
+        month = temp1;
+        cout << "Enter The Date : ";
+        cin >> temp2;
     }
     else
     {
-        cout<<"Invalid Month!!!";
+        cout << "Invalid Month!!!";
     }
 }
 

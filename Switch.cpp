@@ -1,32 +1,32 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 int main()
 {
-   char ch;
-   cout<<"Enter Your Choice :";
-   cin>>ch;
-   
-   switch(ch)
-   {
+    char ch;
+    cout << "Enter Your Choice :";
+    cin >> ch;
+
+    switch (ch)
+    {
     case 'a':
-        cout<<"Hello";
+        cout << "Hello";
         break;
 
     case 'b':
-        cout<<"Hola";
+        cout << "Hola";
         break;
 
     case 'c':
-        cout<<"Namste";
+        cout << "Namste";
         break;
 
     case 'd':
-        cout<<"Ciao";
+        cout << "Ciao";
         break;
 
     default:
-        cout<<"I am still learning..";
+        cout << "I am still learning..";
         break;
-   }
-   return 0;
+    }
+    return 0;
 }

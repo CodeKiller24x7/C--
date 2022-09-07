@@ -5,7 +5,7 @@ class bank
 {
     string name, type;
     long int accno, balance, depo, wd;
-    
+
 public:
     int check(int a)
     {

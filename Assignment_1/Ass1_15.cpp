@@ -1,29 +1,29 @@
-#include<iostream>
-#include<climits>
+#include <iostream>
+#include <climits>
 using namespace std;
 int main()
 {
-   int n,i;
-   cout<<"Enter The Size Of Array : ";
-   cin>>n;
+    int n, i;
+    cout << "Enter The Size Of Array : ";
+    cin >> n;
 
-   int arr[n];
-   for(i=0;i<n;i++)
-   {
-       cout<<"Enter The Value For "<<i+1<<" :  ";
-       cin>>arr[i];
-   }
+    int arr[n];
+    for (i = 0; i < n; i++)
+    {
+        cout << "Enter The Value For " << i + 1 << " :  ";
+        cin >> arr[i];
+    }
 
-   int maxNo=INT_MIN;
-   int minNo=INT_MAX;
+    int maxNo = INT_MIN;
+    int minNo = INT_MAX;
 
-   for(i=0;i<n;i++)
-   {
-       maxNo=max(maxNo,arr[i]);
-       minNo=min(minNo,arr[i]);
-   }
+    for (i = 0; i < n; i++)
+    {
+        maxNo = max(maxNo, arr[i]);
+        minNo = min(minNo, arr[i]);
+    }
 
-   cout<<"The Max Number Is "<<maxNo<<" And The Min Number Is "<<minNo<<".";
+    cout << "The Max Number Is " << maxNo << " And The Min Number Is " << minNo << ".";
 
-   return 0;
+    return 0;
 }
