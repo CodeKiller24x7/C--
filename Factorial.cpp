@@ -19,6 +19,6 @@ int main()
     cin >> n;
 
     ans = fact(n);
-    cout << "Value Of Factorial Upto " << n << " Is " << ans;
+    cout << "Value Of Factorial Upto " << n << " Is " << ans << endl;
     return 0;
 }
