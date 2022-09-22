@@ -5,13 +5,6 @@
 using namespace std;
 string fname, lname, phone_num;
 
-void addContact();
-void searchContact();
-void display();
-void self_exit();
-bool check_digits(string);
-bool check_numbers(string);
-
 // Method 1
 // Helper method
 void self_exit()
@@ -27,12 +20,12 @@ void display()
     // getline(show,detail);
     // cout<<detail;
 
-    while (show.eof()==0)
+    while (show.eof() == 0)
     {
-        getline(show,detail);
-        cout<<detail<<endl;
+        getline(show, detail);
+        cout << detail << endl;
     }
-    
+
     show.close();
 }
 // Method 3
@@ -140,7 +133,7 @@ int main()
         cout << "CONTACT SAVER" << endl;
         cout << "1. Add Contact" << endl;
         cout << "2. Search Contact" << endl;
-        cout << "3. Help" << endl;
+        cout << "3. Display" << endl;
         cout << "4. Exit" << endl;
         cin >> choice;
 
@@ -164,7 +157,7 @@ int main()
             break;
 
         default:
-            cout << "Invalid Input!!!"<<endl;
+            cout << "Invalid Input!!!" << endl;
         }
     } while (choice != 4);
     return 0;
