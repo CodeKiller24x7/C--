@@ -1,18 +1,30 @@
 #include <iostream>
 #include <fstream>
 #include <stdlib.h>
-
 using namespace std;
-string fname, lname, phone_num;
 
-// Method 1
-// Helper method
+class Phonebook
+{
+public:
+    string fname, lname, phone_num;
+    void display();
+    void addContact();
+    void searchContact();
+} p;
+
+class Checker : public Phonebook
+{
+public:
+    bool check_digits(string x);
+    bool check_numbers(string x);
+} c;
+
 void self_exit()
 {
     cout << "Thank You for using Contact-Saver!!!" << endl;
 }
 
-void display()
+void Phonebook::display()
 {
     string detail;
     ifstream show("number.txt");
@@ -30,7 +42,7 @@ void display()
 }
 // Method 3
 // Helper method
-void addContact()
+void Phonebook::addContact()
 {
     ofstream phone("number.txt", ios::app);
     cout << "Enter First Name : ";
@@ -40,9 +52,9 @@ void addContact()
     cout << "Enter Phone Number : ";
     cin >> phone_num;
 
-    if (check_digits(phone_num) == true)
+    if (c.check_digits(phone_num) == true)
     {
-        if (check_numbers(phone_num) == true)
+        if (c.check_numbers(phone_num) == true)
         {
             if (phone.is_open())
             {
@@ -68,7 +80,7 @@ void addContact()
 
 // Method 4
 // Helper method
-void searchContact()
+void Phonebook::searchContact()
 {
     bool found = false;
     ifstream myfile("number.txt");
@@ -84,7 +96,7 @@ void searchContact()
             cout << "Last Name : " << lname << endl;
             cout << "Phone Number : " << phone_num << endl;
             found = true;
-            break;
+            // break;
         }
     }
     if (found == false)
@@ -93,7 +105,7 @@ void searchContact()
 
 // Method 5
 // Helper method
-bool check_digits(string x)
+bool Checker::check_digits(string x)
 {
     if (x.length() == 10)
         return true;
@@ -103,7 +115,7 @@ bool check_digits(string x)
 
 // Method 6
 // Helper method
-bool check_numbers(string x)
+bool Checker::check_numbers(string x)
 {
     bool check = true;
 
@@ -141,15 +153,15 @@ int main()
         switch (choice)
         {
         case 1:
-            addContact();
+            p.addContact();
             break;
 
         case 2:
-            searchContact();
+            p.searchContact();
             break;
 
         case 3:
-            display();
+            p.display();
             break;
 
         case 4:
